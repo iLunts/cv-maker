@@ -1,4 +1,5 @@
 // out: ../../content/css/components/main.css, compress: true
+@import '../variables.less';
 
 body, html{
     background: #F3F6F8;
@@ -16,4 +17,24 @@ img{
 .main{
     padding-top: 60px;
     padding-bottom: 60px;
+
+    &&--preview{
+        position: relative;
+        padding: 60px 0;
+        background: @color-red;
+        color: #fff;
+        overflow: hidden;
+
+        &:before{
+            content: 'SOLIDEXPERT';
+            position: absolute;
+            left: 10%;
+            top: 5%;
+            font-size: 20rem;
+            color: @color-red;
+            font-family: 'Lora', serif;
+            font-weight: 900;
+            text-shadow: 0 14px 30px #da372c;
+        }
+    }
 }
